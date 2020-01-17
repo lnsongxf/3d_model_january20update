@@ -1,0 +1,11 @@
+ant:
+<ant>
+  <mkdir dir="C:\Users\Tolga\Desktop\3d_model_tolga\3d_GUI\model_GUI\for_redistribution" />
+  <mkdir dir="C:\Users\Tolga\Desktop\3d_model_tolga\3d_GUI\model_GUI\for_testing" />
+  <mkdir dir="C:\Users\Tolga\Desktop\3d_model_tolga\3d_GUI\model_GUI\for_redistribution_files_only" />
+</ant>
+mcc -C -o model_GUI -W WinMain:model_GUI -T link:exe -d C:\Users\Tolga\Desktop\3d_model_tolga\3d_GUI\model_GUI\for_testing -v C:\Users\Tolga\Desktop\3d_model_tolga\3d_GUI\model_GUI2.m 
+[Warning: MATLAB Toolbox Path Cache is out of date and is not being used.
+Type 'help toolbox_path_cache' for more info] 
+Compiler version: 6.0 (R2015a)
+Dependency analysis by REQUIREMENTS.

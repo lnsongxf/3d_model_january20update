@@ -1,0 +1,274 @@
+Starting Dynare (version 4.5.7).
+Starting preprocessing of the model file ...
+Substitution of endo leads >= 2: added 2 auxiliary variables and equations.
+Found 139 equation(s).
+Evaluating expressions...done
+Computing static model derivatives:
+ - order 1
+Computing dynamic model derivatives:
+ - order 1
+Processing outputs ...
+done
+Preprocessing completed.
+      0
+                   0
+                   0
+                   0
+                   0
+                   0
+                   0
+                   0
+                   0
+                   0
+  -0.000000000000006
+                   0
+                   0
+                   0
+                   0
+                   0
+                   0
+                   0
+                   0
+                   0
+                   0
+                   0
+                   0
+                   0
+                   0
+                   0
+                   0
+                   0
+                   0
+                   0
+                   0
+                   0
+                   0
+                   0
+                   0
+                   0
+                   0
+
+dynare LTV1_noMeasurement
+
+Configuring Dynare ...
+[mex] Generalized QZ.
+[mex] Sylvester equation solution.
+[mex] Kronecker products.
+[mex] Sparse kronecker products.
+[mex] Local state space iteration (second order).
+[mex] Bytecode evaluation.
+[mex] k-order perturbation solver.
+[mex] k-order solution simulation.
+[mex] Quasi Monte-Carlo sequence (Sobol).
+[mex] Markov Switching SBVAR.
+
+Using 64-bit preprocessor
+Starting Dynare (version 4.5.7).
+Starting preprocessing of the model file ...
+Substitution of endo leads >= 2: added 2 auxiliary variables and equations.
+Found 139 equation(s).
+Evaluating expressions...done
+Computing static model derivatives:
+ - order 1
+Computing dynamic model derivatives:
+ - order 1
+Processing outputs ...
+done
+Preprocessing completed.
+
+
+
+
+
+Residuals of the static equations:
+
+Equation number 1 : 0
+Equation number 2 : 0
+Equation number 3 : 0
+Equation number 4 : 0
+Equation number 5 : 0
+Equation number 6 : 0
+Equation number 7 : 0
+Equation number 8 : 0
+Equation number 9 : 0
+Equation number 10 : 0
+Equation number 11 : 0
+Equation number 12 : 0
+Equation number 13 : 0
+Equation number 14 : 0
+Equation number 15 : 0
+Equation number 16 : 0
+Equation number 17 : 0
+Equation number 18 : 0
+Equation number 19 : 0
+Equation number 20 : 0
+Equation number 21 : 0
+Equation number 22 : 0
+Equation number 23 : 0
+Equation number 24 : 0
+Equation number 25 : 0
+Equation number 26 : 0
+Equation number 27 : 0
+Equation number 28 : 0
+Equation number 29 : 0
+Equation number 30 : 1.2188e-05
+Equation number 31 : -1.1441e-05
+Equation number 32 : 0
+Equation number 33 : 0
+Equation number 34 : 0
+Equation number 35 : 0
+Equation number 36 : -0.0001861
+Equation number 37 : 0
+Equation number 38 : 0
+Equation number 39 : 0
+Equation number 40 : 0
+Equation number 41 : 0
+Equation number 42 : 0
+Equation number 43 : 0
+Equation number 44 : 0
+Equation number 45 : -0.0089286
+Equation number 46 : 0
+Equation number 47 : -0.0014088
+Equation number 48 : 0
+Equation number 49 : -0.090936
+Equation number 50 : -7.4076e-06
+Equation number 51 : 0
+Equation number 52 : -4.6581e-06
+Equation number 53 : 0
+Equation number 54 : 0
+Equation number 55 : 0
+Equation number 56 : -0.0016337
+Equation number 57 : -0.0032456
+Equation number 58 : 0
+Equation number 59 : 0.00082135
+Equation number 60 : 0
+Equation number 61 : 0
+Equation number 62 : 0
+Equation number 63 : 0
+Equation number 64 : 0
+Equation number 65 : 0
+Equation number 66 : 0
+Equation number 67 : 0
+Equation number 68 : 0
+Equation number 69 : 0
+Equation number 70 : 0
+Equation number 71 : 0
+Equation number 72 : 0
+Equation number 73 : 0
+Equation number 74 : 0
+Equation number 75 : 0
+Equation number 76 : 0
+Equation number 77 : 0
+Equation number 78 : 0
+Equation number 79 : 0
+Equation number 80 : 0
+Equation number 81 : 0
+Equation number 82 : 0
+Equation number 83 : 0
+Equation number 84 : 0
+Equation number 85 : 0
+Equation number 86 : 0
+Equation number 87 : 0
+Equation number 88 : 0
+Equation number 89 : 0
+Equation number 90 : 0
+Equation number 91 : 0
+Equation number 92 : 0
+Equation number 93 : 0
+Equation number 94 : 0
+Equation number 95 : 0
+Equation number 96 : 0
+Equation number 97 : 0
+Equation number 98 : 0
+Equation number 99 : 0
+Equation number 100 : 0
+Equation number 101 : 0
+Equation number 102 : 0
+Equation number 103 : 0
+Equation number 104 : 0
+Equation number 105 : 0
+Equation number 106 : 0
+Equation number 107 : 0
+Equation number 108 : 0
+Equation number 109 : 0
+Equation number 110 : 0
+Equation number 111 : 0
+Equation number 112 : 0
+Equation number 113 : 0
+Equation number 114 : 0
+Equation number 115 : 0
+Equation number 116 : 0
+Equation number 117 : 0
+Equation number 118 : 0
+Equation number 119 : 0
+Equation number 120 : 0
+Equation number 121 : 0
+Equation number 122 : 0
+Equation number 123 : 0
+Equation number 124 : 0
+Equation number 125 : 0
+Equation number 126 : 0
+Equation number 127 : 0
+Equation number 128 : 0
+Equation number 129 : 0
+Equation number 130 : 0
+Equation number 131 : 0
+Equation number 132 : 0
+Equation number 133 : 0
+Equation number 134 : 0
+Equation number 135 : 0
+Equation number 136 : 0
+Equation number 137 : 0
+
+
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('print_info', 'C:\dynare\4.5.7\matlab\print_info.m', 76)" style="font-weight:bold">print_info</a> (<a href="matlab: opentoline('C:\dynare\4.5.7\matlab\print_info.m',76,0)">line 76</a>)
+The steadystate file did not compute the steady
+state
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('steady', 'C:\dynare\4.5.7\matlab\steady.m', 104)" style="font-weight:bold">steady</a> (<a href="matlab: opentoline('C:\dynare\4.5.7\matlab\steady.m',104,0)">line 104</a>)
+    print_info(info,options_.noprint, options_);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('LTV1_noMeasurement', 'C:\Users\Tolga\Desktop\3d_model_tolga\perfect_foresight_simulations\LTV1_noMeasurement.m', 1209)" style="font-weight:bold">LTV1_noMeasurement</a> (<a href="matlab: opentoline('C:\Users\Tolga\Desktop\3d_model_tolga\perfect_foresight_simulations\LTV1_noMeasurement.m',1209,0)">line 1209</a>)
+steady;
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\4.5.7\matlab\dynare.m', 236)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\4.5.7\matlab\dynare.m',236,0)">line 236</a>)
+evalin('base',fname) ;
+} 
+edit welfare_analysis_3dim
+log(-32/-34)
+
+ans =
+
+  -0.060624621816435
+
+edit main_counterfactuals
+clear
+clc
+main_counterfactuals
+
+Configuring Dynare ...
+[mex] Generalized QZ.
+[mex] Sylvester equation solution.
+[mex] Kronecker products.
+[mex] Sparse kronecker products.
+[mex] Local state space iteration (second order).
+[mex] Bytecode evaluation.
+[mex] k-order perturbation solver.
+[mex] k-order solution simulation.
+[mex] Quasi Monte-Carlo sequence (Sobol).
+[mex] Markov Switching SBVAR.
+
+Using 64-bit preprocessor
+Starting Dynare (version 4.5.7).
+Starting preprocessing of the model file ...
+Substitution of endo leads >= 2: added 2 auxiliary variables and equations.
+Found 189 equation(s).
+Evaluating expressions...done
+Computing static model derivatives:
+ - order 1
+Computing dynamic model derivatives:
+ - order 1
+Processing outputs ...
+done
+Preprocessing completed.
+

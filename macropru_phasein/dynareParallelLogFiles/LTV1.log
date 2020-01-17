@@ -1,0 +1,149 @@
+Starting Dynare (version 4.5.6).
+Starting preprocessing of the model file ...
+Substitution of endo leads >= 2: added 2 auxiliary variables and equations.
+Found 188 equation(s).
+Evaluating expressions...done
+Computing static model derivatives:
+ - order 1
+Computing dynamic model derivatives:
+ - order 1
+Processing outputs ...
+done
+Preprocessing completed.
+href="matlab:helpUtils.errorDocCallback('dynare_estimation_1', 'C:\Users\331266\Desktop\dynare\4.5.6\matlab\dynare_estimation_1.m', 448)" style="font-weight:bold">dynare_estimation_1</a> (<a href="matlab: opentoline('C:\Users\331266\Desktop\dynare\4.5.6\matlab\dynare_estimation_1.m',448,0)">line 448</a>)
+            posterior_sampler(objective_function,posterior_sampler_options.proposal_distribution,xparam1,posterior_sampler_options,bounds,dataset_,dataset_info,options_,M_,estim_params_,bayestopt_,oo
+            Error in <a href="matlab:helpUtils.errorDocCallback('dynare_estimation', 'C:\Users\331266\Desktop\dynare\4.5.6\matlab\dynare_estimation.m', 105)" style="font-weight:bold">dynare_estimation</a> (<a href="matlab: opentoline('C:\Users\331266\Desktop\dynare\4.5.6\matlab\dynare_estimation.m',105,0)">line 105</a>)
+    dynare_estimation_1(var_list,dname);
+
+Error in <a href="matlab:helpUtils.errorDocCallback('LTV1', 'C:\Users\331266\Desktop\markups\LTV1.m', 1407)" style="font-weight:bold">LTV1</a> (<a href="matlab: opentoline('C:\Users\331266\Desktop\markups\LTV1.m',1407,0)">line 1407</a>)
+oo_recursive_=dynare_estimation(var_list_);
+
+Error in <a href="matlab:helpUtils.errorDocCallback('dynare', 'C:\Users\331266\Desktop\dynare\4.5.6\matlab\dynare.m', 235)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\Users\331266\Desktop\dynare\4.5.6\matlab\dynare.m',235,0)">line 235</a>)
+evalin('base',fname) ;
+
+Error in <a href="matlab:helpUtils.errorDocCallback('main', 'C:\Users\331266\Desktop\markups\main.m', 7)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('C:\Users\331266\Desktop\markups\main.m',7,0)">line 7</a>)
+dynare LTV1.mod;
+} 
+run_mcmc_parallel
+{Undefined function or variable 'run_mcmc_parallel'.
+} 
+mcmc_parallel_run
+{Undefined function or variable 'mcmc_parallel_run'.
+} 
+run_mcmc_parallel
+{Undefined function or variable 'run_mcmc_parallel'.
+} 
+run_parallel_mcmc
+
+Configuring Dynare ...
+[mex] Generalized QZ.
+[mex] Sylvester equation solution.
+[mex] Kronecker products.
+[mex] Sparse kronecker products.
+[mex] Local state space iteration (second order).
+[mex] Bytecode evaluation.
+[mex] k-order perturbation solver.
+[mex] k-order solution simulation.
+[mex] Quasi Monte-Carlo sequence (Sobol).
+[mex] Markov Switching SBVAR.
+
+Using 32-bit preprocessor
+Starting Dynare (version 4.5.6).
+Starting preprocessing of the model file ...
+Substitution of endo leads >= 2: added 2 auxiliary variables and equations.
+Found 188 equation(s).
+Evaluating expressions...done
+Computing static model derivatives:
+ - order 1
+Computing dynamic model derivatives:
+ - order 1
+Processing outputs ...
+done
+Preprocessing completed.
+
+
+You did not declare endogenous variables after the estimation/calib_smoother command.
+
+Initial value of the log posterior (or likelihood): -630.8228
+
+RESULTS FROM POSTERIOR ESTIMATION
+parameters
+           prior mean     mode    s.d. prior pstdev
+
+sigma_e1       0.100   0.0490  0.0220 invg  2.0000 
+sigma_m1       0.100   0.0315  0.0034 invg  2.0000 
+sigma_B        0.100   0.0663  0.0018 invg  2.0000 
+psi_i         10.000   1.6323  0.3757 norm  2.0000 
+psi_h         10.000  20.7765  1.4611 norm  2.0000 
+zeta_m         0.500   0.6292  0.0310 beta  0.2000 
+zeta_F         0.500   0.7819  0.0199 beta  0.2000 
+rhoHd          0.500   0.9339  0.0047 beta  0.2000 
+rhoHk          0.500   0.9919  0.0067 beta  0.2000 
+rhoA           0.500   0.9775  0.0130 beta  0.2000 
+rhoJ           0.500   0.9227  0.0066 beta  0.2000 
+rhoSe          0.500   0.5619  0.2712 beta  0.2000 
+rhoSm          0.500   0.5427  0.2742 beta  0.2000 
+rhoSB          0.500   0.0570  0.0301 beta  0.2000 
+rhoWe          0.500   0.2284  0.0782 beta  0.2000 
+rho_markup_m   0.500   0.9961  0.0027 beta  0.2000 
+rho_markup_F   0.500   0.9934  0.0047 beta  0.2000 
+rhoEC          0.500   0.9139  0.0132 beta  0.2000 
+rhoECAB        0.500   0.5260  0.2762 beta  0.2000 
+
+standard deviation of shocks
+           prior mean     mode    s.d. prior pstdev
+
+epsiHd        10.000   0.0093  0.0009 unif  5.7735 
+epsiHk        10.000   0.0032  0.0005 unif  5.7735 
+epsiA         10.000   0.0023  0.0002 unif  5.7735 
+epsiJ         10.000   0.5741  0.0791 unif  5.7735 
+epsiSe         0.100   0.0492  0.0222 invg  2.0000 
+epsiSm         0.100   0.0481  0.0210 invg  2.0000 
+epsiSB         0.100   0.0267  0.0057 invg  2.0000 
+epsiWe        10.000   0.0069  0.0008 unif  5.7735 
+epsimarkup_m  10.000   0.0004  0.0000 unif  5.7735 
+epsimarkup_F  10.000   0.0005  0.0000 unif  5.7735 
+epsiEC        10.000   0.0155  0.0014 unif  5.7735 
+epsiECAB      10.000   0.0698  0.0105 unif  5.7735 
+
+
+Log data density [Laplace approximation] is -753.369419.
+
+Estimation::mcmc: Multiple chains mode.
+Estimation::mcmc: Old metropolis.log file successfully erased!
+Estimation::mcmc: Creation of a new metropolis.log file.
+Estimation::mcmc: Searching for initial values...
+Estimation::mcmc: Initial values found!
+
+Estimation::mcmc: Write details about the MCMC... Ok!
+Estimation::mcmc: Details about the MCMC are available in LTV1/metropolis\LTV1_mh_history_0.mat
+
+ 
+C:\Users\331266\Desktop\markups>psexec -accepteula -d -W "C:\Users\331266\Desktop\markups" -a 0 -low  matlab -nosplash -nodesktop -minimize  -r "addpath('C:\Users\331266\Desktop\dynare\4.5.6\matlab\'), dynareroot = dynare_config(); fParallel(1,1,1,1,'posterior_sampler_core')"  
+ 
+PsExec v2.2 - Execute processes remotely 
+Copyright (C) 2001-2016 Mark Russinovich 
+Sysinternals - www.sysinternals.com 
+ 
+matlab started with process ID 3888. 
+ 
+C:\Users\331266\Desktop\markups>psexec -accepteula -d -W "C:\Users\331266\Desktop\markups" -a 1 -low  matlab -nosplash -nodesktop -minimize  -r "addpath('C:\Users\331266\Desktop\dynare\4.5.6\matlab\'), dynareroot = dynare_config(); fParallel(2,2,2,1,'posterior_sampler_core')"  
+ 
+PsExec v2.2 - Execute processes remotely 
+Copyright (C) 2001-2016 Mark Russinovich 
+Sysinternals - www.sysinternals.com 
+ 
+matlab started with process ID 4160. 
+ 
+C:\Users\331266\Desktop\markups>psexec -accepteula -d -W "C:\Users\331266\Desktop\markups" -a 2 -low  matlab -nosplash -nodesktop -minimize  -r "addpath('C:\Users\331266\Desktop\dynare\4.5.6\matlab\'), dynareroot = dynare_config(); fParallel(3,3,3,1,'posterior_sampler_core')"  
+ 
+PsExec v2.2 - Execute processes remotely 
+Copyright (C) 2001-2016 Mark Russinovich 
+Sysinternals - www.sysinternals.com 
+ 
+matlab started with process ID 10096. 
+ 
+C:\Users\331266\Desktop\markups>psexec -accepteula -d -W "C:\Users\331266\Desktop\markups" -a 3 -low  matlab -nosplash -nodesktop -minimize  -r "addpath('C:\Users\331266\Desktop\dynare\4.5.6\matlab\'), dynareroot = dynare_config(); fParallel(4,4,4,1,'posterior_sampler_core')"  
+ 
+PsExec v2.2 - Execute processes remotely 
+Copyright (C) 2001-2016 Mark Rus

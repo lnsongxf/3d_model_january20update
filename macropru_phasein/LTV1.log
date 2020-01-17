@@ -1,0 +1,68 @@
+Starting Dynare (version 4.5.6).
+Starting preprocessing of the model file ...
+Substitution of endo leads >= 2: added 2 auxiliary variables and equations.
+Found 192 equation(s).
+Evaluating expressions...done
+Computing static model derivatives:
+ - order 1
+Computing dynamic model derivatives:
+ - order 1
+ - order 2
+Processing outputs ...
+done
+Preprocessing completed.
+
+You did not declare endogenous variables after the estimation/calib_smoother command.
+
+The posterior mode file LTV1_mode.mat has been generated using another specification of the model or another model!
+Your mode file contains estimates for 33 parameters, while you are attempting to estimate only 31 parameters:
+--> Parameter zeta_m is not estimated according to the current mod file.
+--> Parameter zeta_F is not estimated according to the current mod file.
+==> Fix mode file (remove unused parameters).
+
+Initial value of the log posterior (or likelihood): -666.38
+
+RESULTS FROM POSTERIOR ESTIMATION
+parameters
+           prior mean     mode    s.d. prior pstdev
+
+sigma_e1       0.100   0.0652  0.0188 invg  2.0000 
+sigma_m1       0.100   0.0827  0.0126 invg  2.0000 
+sigma_B        0.100   0.0749  0.0008 invg  2.0000 
+psi_i          5.000  10.0836  1.1087 norm  2.0000 
+psi_h          5.000  13.3884  0.5541 norm  2.0000 
+rhoHd          0.500   0.9380  0.0030 beta  0.2000 
+rhoHk          0.500   0.8423  0.0054 beta  0.2000 
+rhoA           0.500   0.9801  0.0039 beta  0.2000 
+rhoJ           0.500   0.9868  0.0011 beta  0.2000 
+rhoSe          0.500   0.4171  0.2773 beta  0.2000 
+rhoSm          0.500   0.4333  0.0736 beta  0.2000 
+rhoSB          0.500   0.9738  0.0453 beta  0.2000 
+rhoWe          0.500   0.9188  0.0168 beta  0.2000 
+rhoWb          0.500   0.9733  0.0051 beta  0.2000 
+rho_markup_m   0.500   0.9532  0.0449 beta  0.2000 
+rho_markup_F   0.500   0.8962  0.0160 beta  0.2000 
+rhoEC          0.500   0.8506  0.0175 beta  0.2000 
+rhoECAB        0.500   0.2898  0.2773 beta  0.2000 
+
+standard deviation of shocks
+           prior mean     mode    s.d. prior pstdev
+
+epsiHd        10.000   0.0044  0.0005 unif  5.7735 
+epsiHk        10.000   0.0068  0.0006 unif  5.7735 
+epsiA         10.000   0.0064  0.0006 unif  5.7735 
+epsiJ         10.000   0.0698  0.0099 unif  5.7735 
+epsiSe         0.100   0.1134  0.0188 invg  2.0000 
+epsiSm         0.100   0.0500  0.0215 invg  2.0000 
+epsiSB         0.100   0.0191  0.0049 invg  2.0000 
+epsiWe        10.000   0.0128  0.0009 unif  5.7735 
+epsiWb        10.000   0.0074  0.0017 unif  5.7735 
+epsimarkup_m  10.000   0.0004  0.0000 unif  5.7735 
+epsimarkup_F  10.000   0.0003  0.0000 unif  5.7735 
+epsiEC        10.000   0.0137  0.0011 unif  5.7735 
+epsiECAB      10.000   0.0299  0.0029 unif  5.7735 
+
+
+Log data density [Laplace approximation] is -793.024833.
+
+Total computing time : 0h00m03s

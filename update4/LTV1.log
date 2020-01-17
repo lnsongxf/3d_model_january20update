@@ -1,0 +1,275 @@
+Starting Dynare (version 4.5.7).
+Starting preprocessing of the model file ...
+Substitution of endo leads >= 2: added 2 auxiliary variables and equations.
+Found 191 equation(s).
+Evaluating expressions...done
+Computing static model derivatives:
+ - order 1
+Computing dynamic model derivatives:
+ - order 1
+Processing outputs ...
+done
+Preprocessing completed.
+
+You did not declare endogenous variables after the estimation/calib_smoother command.
+
+Initial value of the log posterior (or likelihood): -13678039102114.4
+ 
+ Iteration   Func-count     min f(x)         Procedure
+     0            1       1.3678e+13         
+     1           27      5.77863e+10         initial simplex
+     2           55      5.77863e+10         shrink
+     3           83      5.76695e+10         shrink
+     4          111      5.76695e+10         shrink
+     5          139      5.76695e+10         shrink
+     6          140      5.76695e+10         reflect
+     7          141      5.76695e+10         reflect
+     8          142      5.76695e+10         reflect
+     9          143      5.76695e+10         reflect
+    10          144      5.76695e+10         reflect
+    11          145      5.76695e+10         reflect
+    12          147      5.76695e+10         contract inside
+    13          148      5.76695e+10         reflect
+    14          149      5.76695e+10         reflect
+    15          177       5.7287e+10         shrink
+    16          179       5.7287e+10         contract inside
+    17          180       5.7287e+10         reflect
+    18          181       5.7287e+10         reflect
+    19          183       5.7287e+10         contract inside
+    20          184       5.7287e+10         reflect
+    21          212       5.7287e+10         shrink
+    22          213       5.7287e+10         reflect
+    23          214       5.7287e+10         reflect
+    24          215       5.7287e+10         reflect
+    25          216       5.7287e+10         reflect
+    26          217       5.7287e+10         reflect
+    27          218       5.7287e+10         reflect
+    28          219       5.7287e+10         reflect
+    29          220       5.7287e+10         reflect
+    30          221       5.7287e+10         reflect
+    31          222       5.7287e+10         reflect
+    32          223       5.7287e+10         reflect
+    33          224       5.7287e+10         reflect
+    34          252      5.71817e+10         shrink
+    35          253      5.71817e+10         reflect
+    36          254      5.71817e+10         reflect
+    37          256      5.71817e+10         contract inside
+    38          257      5.71817e+10         reflect
+    39          258      5.71817e+10         reflect
+    40          259      5.71817e+10         reflect
+    41          260      5.71817e+10         reflect
+    42          261      5.71817e+10         reflect
+    43          262      5.71817e+10         reflect
+    44          263      5.71817e+10         reflect
+    45          264      5.71817e+10         reflect
+    46          265      5.71817e+10         reflect
+    47          267      5.71817e+10         contract inside
+    48          268      5.71817e+10         reflect
+    49          296      5.70047e+10         shrink
+    50          297      5.70047e+10         reflect
+    51          298      5.70047e+10         reflect
+    52          299      5.70047e+10         reflect
+    53          300      5.70047e+10         reflect
+    54          301      5.70047e+10         reflect
+    55          302      5.70047e+10         reflect
+    56          303      5.70047e+10         reflect
+    57          304      5.70047e+10         reflect
+    58          305      5.70047e+10         reflect
+    59          306      5.70047e+10         reflect
+    60          307      5.70047e+10         reflect
+    61          308      5.70047e+10         reflect
+    62          309      5.70047e+10         reflect
+    63          310      5.70047e+10         reflect
+    64          311      5.70047e+10         reflect
+    65          339      5.69866e+10         shrink
+    66          341      5.69866e+10         contract outside
+    67          342      5.69866e+10         reflect
+    68          343      5.69866e+10         reflect
+    69          344      5.69866e+10         reflect
+    70          345      5.69866e+10         reflect
+    71          346      5.69866e+10         reflect
+    72          347      5.69866e+10         reflect
+    73          348      5.69866e+10         reflect
+    74          349      5.69866e+10         reflect
+    75          350      5.69866e+10         reflect
+    76          351      5.69866e+10         reflect
+    77          352      5.69866e+10         reflect
+    78          353      5.69866e+10         reflect
+    79          355      5.69866e+10         contract inside
+    80          357      5.69866e+10         contract inside
+    81          359      5.69866e+10         contract inside
+    82          387      5.69866e+10         shrink
+    83          388      5.69866e+10         reflect
+    84          389      5.69866e+10         reflect
+    85          390      5.69866e+10         reflect
+    86          391      5.69866e+10         reflect
+    87          392      5.69866e+10         reflect
+    88          393      5.69866e+10         reflect
+    89          394      5.69866e+10         reflect
+    90          395      5.69866e+10         reflect
+    91          396      5.69866e+10         reflect
+    92          424      5.69866e+10         shrink
+    93          425      5.69866e+10         reflect
+    94          426      5.69866e+10         reflect
+    95          427      5.69866e+10         reflect
+    96          428      5.69866e+10         reflect
+    97          429      5.69866e+10         reflect
+    98          430      5.69866e+10         reflect
+    99          431      5.69866e+10         reflect
+   100          432      5.69866e+10         reflect
+   101          433      5.69866e+10         reflect
+   102          434      5.69866e+10         reflect
+   103          436      5.69866e+10         contract inside
+   104          437      5.69866e+10         reflect
+   105          438      5.69866e+10         reflect
+   106          439      5.69866e+10         reflect
+   107          440      5.69866e+10         reflect
+   108          468      5.69866e+10         shrink
+   109          469      5.69866e+10         reflect
+   110          470      5.69866e+10         reflect
+   111          471      5.69866e+10         reflect
+   112          472      5.69866e+10         reflect
+   113          474      5.69866e+10         contract inside
+   114          475      5.69866e+10         reflect
+   115          503      5.69866e+10         shrink
+   116          504      5.69866e+10         reflect
+   117          505      5.69866e+10         reflect
+   118          506      5.69866e+10         reflect
+   119          508      5.69866e+10         contract outside
+   120          510      5.69866e+10         contract inside
+   121          511      5.69866e+10         reflect
+   122          512      5.69866e+10         reflect
+   123          513      5.69866e+10         reflect
+   124          515      5.69866e+10         contract inside
+   125          516      5.69866e+10         reflect
+   126          517      5.69866e+10         reflect
+   127          545      5.69866e+10         shrink
+   128          546      5.69866e+10         reflect
+   129          547      5.69866e+10         reflect
+   130          548      5.69866e+10         reflect
+   131          549      5.69866e+10         reflect
+   132          550      5.69866e+10         reflect
+   133          551      5.69866e+10         reflect
+   134          552      5.69866e+10         reflect
+   135          554      5.69866e+10         contract inside
+   136          556      5.69866e+10         contract inside
+   137          557      5.69866e+10         reflect
+   138          558      5.69866e+10         reflect
+   139          586      5.69866e+10         shrink
+   140          587      5.69866e+10         reflect
+   141          588      5.69866e+10         reflect
+   142          589      5.69866e+10         reflect
+   143          590      5.69866e+10         reflect
+   144          591      5.69866e+10         reflect
+   145          592      5.69866e+10         reflect
+   146          594      5.69866e+10         contract outside
+   147          595      5.69866e+10         reflect
+   148          596      5.69866e+10         reflect
+   149          597      5.69866e+10         reflect
+   150          598      5.69866e+10         reflect
+   151          599      5.69866e+10         reflect
+   152          600      5.69866e+10         reflect
+   153          601      5.69866e+10         reflect
+   154          603      5.69866e+10         contract inside
+   155          604      5.69866e+10         reflect
+   156          605      5.69866e+10         reflect
+   157          607      5.69866e+10         contract inside
+   158          609      5.69866e+10         contract inside
+   159          611      5.69866e+10         contract inside
+   160          612      5.69866e+10         reflect
+   161          614      5.69866e+10         contract inside
+   162          642      5.69866e+10         shrink
+   163          644      5.69866e+10         contract outside
+   164          645      5.69866e+10         reflect
+   165          646      5.69866e+10         reflect
+   166          647      5.69866e+10         reflect
+   167          648      5.69866e+10         reflect
+   168          649      5.69866e+10         reflect
+   169          650      5.69866e+10         reflect
+   170          651      5.69866e+10         reflect
+   171          652      5.69866e+10         reflect
+   172          654      5.69866e+10         contract inside
+   173          655      5.69866e+10         reflect
+   174          657      5.69866e+10         contract inside
+   175          658      5.69866e+10         reflect
+   176          660      5.69866e+10         contract inside
+   177          662      5.69866e+10         contract inside
+   178          663      5.69866e+10         reflect
+   179          691      5.69866e+10         shrink
+   180          692      5.69866e+10         reflect
+   181          693      5.69866e+10         reflect
+   182          694      5.69866e+10         reflect
+   183          695      5.69866e+10         reflect
+   184          697      5.69866e+10         contract inside
+   185          698      5.69866e+10         reflect
+   186          699      5.69866e+10         reflect
+   187          700      5.69866e+10         reflect
+   188          728      5.69866e+10         shrink
+   189          729      5.69866e+10         reflect
+   190          730      5.69866e+10         reflect
+   191          731      5.69866e+10         reflect
+   192          733      5.69866e+10         contract inside
+   193          734      5.69866e+10         reflect
+   194          735      5.69866e+10         reflect
+   195          737      5.69866e+10         contract inside
+   196          738      5.69866e+10         reflect
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('compute_Pinf_Pstar', 'C:\dynare\4.5.7\matlab\compute_Pinf_Pstar.m', 87)" style="font-weight:bold">compute_Pinf_Pstar</a> (<a href="matlab: opentoline('C:\dynare\4.5.7\matlab\compute_Pinf_Pstar.m',87,0)">line 87</a>)
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dsge_likelihood', 'C:\dynare\4.5.7\matlab\dsge_likelihood.m', 361)" style="font-weight:bold">dsge_likelihood</a> (<a href="matlab: opentoline('C:\dynare\4.5.7\matlab\dsge_likelihood.m',361,0)">line 361</a>)
+    [Pstar,Pinf] = compute_Pinf_Pstar(Z,T,R,Q,DynareOptions.qz_criterium);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fminsearch', 'C:\Program Files\MATLAB\MATLAB Production Server\R2015a\toolbox\matlab\optimfun\fminsearch.p', 365)" style="font-weight:bold">fminsearch</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\MATLAB Production Server\R2015a\toolbox\matlab\optimfun\fminsearch.p',365,0)">line 365</a>)
+                    x(:) = v(:,j); fv(:,j) = funfcn(x,varargin{:});
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_minimize_objective', 'C:\dynare\4.5.7\matlab\optimization\dynare_minimize_objective.m', 271)" style="font-weight:bold">dynare_minimize_objective</a> (<a href="matlab: opentoline('C:\dynare\4.5.7\matlab\optimization\dynare_minimize_objective.m',271,0)">line 271</a>)
+        [opt_par_values,fval,exitflag] = fminsearch(objective_function,start_par_value,optim_options,varargin{:});
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_estimation_1', 'C:\dynare\4.5.7\matlab\dynare_estimation_1.m', 220)" style="font-weight:bold">dynare_estimation_1</a> (<a href="matlab: opentoline('C:\dynare\4.5.7\matlab\dynare_estimation_1.m',220,0)">line 220</a>)
+    [xparam1, fval, exitflag, hh, options_, Scale, new_rat_hess_info] =
+    dynare_minimize_objective(objective_function,xparam1,options_.mode_compute,options_,[bounds.lb
+    bounds.ub],bayestopt_.name,bayestopt_,hh,dataset_,dataset_info,options_,M_,estim_params_,bayestopt_,bounds,oo_);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_estimation', 'C:\dynare\4.5.7\matlab\dynare_estimation.m', 105)" style="font-weight:bold">dynare_estimation</a> (<a href="matlab: opentoline('C:\dynare\4.5.7\matlab\dynare_estimation.m',105,0)">line 105</a>)
+    dynare_estimation_1(var_list,dname);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('LTV1', 'C:\Users\tolga\OneDrive\Desktop\3d_model_updated\update4\LTV1.m', 1432)" style="font-weight:bold">LTV1</a> (<a href="matlab: opentoline('C:\Users\tolga\OneDrive\Desktop\3d_model_updated\update4\LTV1.m',1432,0)">line 1432</a>)
+oo_recursive_=dynare_estimation(var_list_);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\4.5.7\matlab\dynare.m', 235)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\4.5.7\matlab\dynare.m',235,0)">line 235</a>)
+evalin('base',fname) ;
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'C:\Users\tolga\OneDrive\Desktop\3d_model_updated\update4\main.m', 7)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('C:\Users\tolga\OneDrive\Desktop\3d_model_updated\update4\main.m',7,0)">line 7</a>)
+dynare LTV1.mod;
+} 
+clear
+clc
+edit LTV1.mod
+main
+
+Configuring Dynare ...
+[mex] Generalized QZ.
+[mex] Sylvester equation solution.
+[mex] Kronecker products.
+[mex] Sparse kronecker products.
+[mex] Local state space iteration (second order).
+[mex] Bytecode evaluation.
+[mex] k-order perturbation solver.
+[mex] k-order solution simulation.
+[mex] Quasi Monte-Carlo sequence (Sobol).
+[mex] Markov Switching SBVAR.
+
+Using 64-bit preprocessor
+Starting Dynare (version 4.5.7).
+Starting preprocessing of the model file ...
+Substitution of endo leads >= 2: added 2 auxiliary variables and equations.
+Found 191 equation(s).
+Evaluating expressions...done
+Computing static model derivatives:
+ - order 1
+Computing dynamic model derivatives:
+ - order 1
+Processing outputs ...
+done
+Preprocessing completed.
+
