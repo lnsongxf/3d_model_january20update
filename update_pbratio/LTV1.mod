@@ -153,6 +153,8 @@ ECAB
 EL
 EbH
 EbF
+ELTVH
+ELTVF
 //ERW        //RW shock
 phi_F        // Minimum capital ratio for corporate banks
 phi_H        // Minimum capital ratio for mortgage banks
@@ -224,17 +226,18 @@ welfare_
 welfare_obs
 dl_data
 pb_ratio_data
+
 ;
 parameters sigma_epsiHd sigma_epsiHk sigma_epsiA sigma_epsiJ sigma_epsiK sigma_epsiH 
-sigma_epsiSe sigma_epsiSm sigma_epsiSB sigma_epsiWb sigma_epsiRW sigma_epsiWe sigma_epsiEC sigma_epsiEL pp  
+sigma_epsiSe sigma_epsiSm sigma_epsiSB sigma_epsiWb sigma_epsiRW sigma_epsiWe sigma_epsiEC sigma_epsiEL pp  sigma_ELTVH sigma_ELTVF
 hab Cyphi_H Cyphi_F phi_Fs phi_Hs alphaa delta_K delta_H betta_m betta_s mu_m mu_e mu_B
 sigma_e1 sigma_m1 sigma_B varphi_s varphi_m v_s v_m chi_b chi_e eta  a_e a_s a_b   psi_i psi_h 
-rhoA rhoJ rhoK rhoH rhoSe rhoSm rhoSB rhoWb rhoWe rhoHd rhoHk rhoRW rho_markup_m rho_markup_F rhoEC rhoECAB rhoEL rhoEbH rhoEbF
+rhoA rhoJ rhoK rhoH rhoSe rhoSm rhoSB rhoWb rhoWe rhoHd rhoHk rhoRW rho_markup_m rho_markup_F rhoEC rhoECAB rhoEL rhoEbH rhoEbF rhoLTVH rhoLTVF
 zeta_m zeta_F epsilonH1s epsilonF1s tau_H tau_F rp rpe phiinf1 kappa nu psib phis LTVHrule LTVFrule
 gamma_y gamma_w gamma_inve gamma_c gamma_dbe gamma_dbm gamma_bspH gamma_dq_H def_rate_ss  omikronH omikronF pb_mean
 ;
     
-varexo epsiA  epsiJ epsiK epsiSe epsiSm epsiSB epsiWb  epsiWe epsiH epsiHd epsiHk epsimarkup_m epsimarkup_F epsiEC epsiECAB epsiEL epsiEbH epsiEbF;
+varexo epsiA  epsiJ epsiK epsiSe epsiSm epsiSB epsiWb  epsiWe epsiH epsiHd epsiHk epsimarkup_m epsimarkup_F epsiEC epsiECAB epsiEL epsiEbH epsiEbF epsiLTVH epsiLTVF;
 
 //===============================
 //SET PARAMETER VALUES
@@ -261,6 +264,9 @@ sigma_epsiECAB=set_sigma_epsiECAB;
 sigma_epsiEL=set_sigma_epsiEL;
 sigma_epsiEbH=set_sigma_epsiEbH;
 sigma_epsiEbF=set_sigma_epsiEbF;
+sigma_ELTVH=set_sigma_ELTVH;
+sigma_ELTVF=set_sigma_ELTVF;
+
  pp  = set_pp ; // transaction cost when recovering funds from failed banks
 betta_s=set_betta_s; // patient HH discount factor
 betta_m=set_betta_m; // impatient HH discount factor
@@ -316,6 +322,9 @@ rhoECAB=set_rhoECAB;
 rhoEL=set_rhoEL;
 rhoEbH=set_rhoEbH;
 rhoEbF=set_rhoEbF;
+rhoLTVH=set_rhoLTVH;
+rhoLTVF=set_rhoLTVF;
+
 rhoRW =set_rhoRW ; //shock persistence parameters, same notation as standard deviation
 zeta_m=set_zeta_m; // Interest rate stickiness, same as below, appears in  R_m R_F
 zeta_F=set_zeta_F; // Interest rate stickiness,  appears in 51 FOC for bank business lending, 51 is not in use 
@@ -418,9 +427,9 @@ Lambda_m = UC_m_1;
 //29 foc L_m
 UL_m_1 = w*Lambda_m;
 // 30--ltv limit borrowers
-(b_m-b_m(-1)*(1-rp)*(1-F_pi))*R_m=(epsilonH-omikronH*phi_H)*(H_m-H_m(-1)*(1-deltaH))*EbH*q_H(+1);
+(b_m-b_m(-1)*(1-rp)*(1-F_pi))*R_m=ELTVH*(epsilonH-omikronH*phi_H)*(H_m-H_m(-1)*(1-deltaH))*EbH*q_H(+1);
 // 31--ltv limit entrepreneurs
-(b_e-b_e(-1)*(1-rpe)*(1-F_pe))*R_F=(epsilonF-omikronF*phi_F)*(K-K(-1)*(1-deltaK))*EbF*q_K(+1);
+(b_e-b_e(-1)*(1-rpe)*(1-F_pe))*R_F=ELTVF*(epsilonF-omikronF*phi_F)*(K-K(-1)*(1-deltaK))*EbF*q_K(+1);
 // 32--ltv rule borrowers
 //epsilonH=epsilonH1s;
 exp(epsilonH-epsilonH1s)=(b_m/steady_state(b_m))^(-LTVHrule);
@@ -449,7 +458,7 @@ x_e = (R_F)*(q_K*K-n_e)/(q_K*K);
 // 40 Foc k
 (((1-G_e(1))*R_K(1)*q_K))*betta_s*(Lambda_s(+1)/Lambda_s)-(q_K*R_F*(1-F_pe(+1)))+xi_e*(epsilonF*EbF*q_K(+1)-R_F)-xi_e(+1)*(epsilonF*EbF(1)*q_K(+2)*(1-deltaK)-(1-rpe)*(1-F_pe(+1))*R_F(+1))=0 ;//need to be changed for pc
 // 41 Wealth dynamics entrepreneurs  
-W_e= EWe* (1-Gamma_e)*R_K*q_K(-1)*K(-1) ;
+W_e= EWe*(1-Gamma_e)*R_K*q_K(-1)*K(-1) ;
 // 42 Evolution individual net worth 
 n_e = (1-chi_e)*W_e;
 // 43 Corporate dividends
@@ -458,7 +467,7 @@ C_e=chi_e*W_e;
 // Bankers
 //************************************************************
 // 42 banker wealth
-W_b=Pr_H;
+W_b=EWb*Pr_H;
 // 45 Banker net worth allocated to lending
 n_b = (1-chi_b)*W_b;
 // 46 Bank dividends
@@ -511,13 +520,13 @@ w = (1-alphaa)*Y/L;
 // (depend on I/I(-1)) - Christiano, Eichenbaum and Evans (1995) - JPE
 //************************************************************
 // 59 Capital adj cost function
-g_I = EK*psi_i/2*(I/I(-1)-1)^2;
+g_I = psi_i/2*(I/I(-1)-1)^2;
 // 60 foc of (57) wrt I
-g_I_1 = EK*psi_i*(I/I(-1)-1);
+g_I_1 = psi_i*(I/I(-1)-1);
 // 61 Capital stock evolution
 K = (1-deltaK)*K(-1) + I*(1-g_I );
 // 62 Capital price
-q_K = 1 + g_I + I/I(-1)*g_I_1 - betta_s*Lambda_s(1)/Lambda_s*(I(1)/I)^2*g_I_1(1);
+q_K/EK = 1 + g_I + I/I(-1)*g_I_1 - betta_s*Lambda_s(1)/Lambda_s*(I(1)/I)^2*g_I_1(1);
 // 63 Flow profit of capital producers
 PI = q_K*I - (1 + g_I)*I; 
 //*******************************
@@ -537,13 +546,13 @@ L = L_s + L_m;
 // Housing supply with CEE Adj costs
 //*******************************
 // 67 Capital adj cost function
-g_H = EH*psi_h/2*(IH/IH(-1)-1)^2;
+g_H = psi_h/2*(IH/IH(-1)-1)^2;
 // 68 foc of (63) wrt IH
-g_H_1 = EH*psi_h*(IH/IH(-1)-1);
+g_H_1 = psi_h*(IH/IH(-1)-1);
 // 69 Housing stock evolution
 H = (1-deltaH)*H(-1) + IH*(1-g_H);
 // 70 Housing price with CEE Adj costs
-q_H = 1 + g_H + IH/IH(-1)*g_H_1 - betta_s*Lambda_s(1)/Lambda_s*(IH(1)/IH)^2*g_H_1(1);
+q_H/EH = 1 + g_H + IH/IH(-1)*g_H_1 - betta_s*Lambda_s(1)/Lambda_s*(IH(1)/IH)^2*g_H_1(1);
 // 71 Flow profits by housing producers 
 PH= q_H*IH - (1 + g_H)*IH;  
 // 72 Aggregate housing market clearing (Supply (LHS) = Demand (RHS))
@@ -731,6 +740,8 @@ log(EbF)=rhoEbF*log(EbF(-1))+epsiEbF ;
 log(EWe) = rhoWe*log(EWe(-1)) + epsiWe;
 log(EWb) = rhoWb*log(EWb(-1)) + epsiWb ;
 //log(ERW) = rhoRW*log(ERW(-1))+ epsiRW;
+log(ELTVH) = rhoLTVH*log(ELTVH(-1))+epsiLTVH;
+log(ELTVF) = rhoLTVF*log(ELTVF(-1))+epsiLTVF;
 //Depreciation shocks are perfectly correlated across H and K sectors--> this has been changed?
 EdH      = rhoHd*EdH(-1) + epsiHd;
 EdK      = rhoHk*EdK(-1) + epsiHk;
@@ -753,7 +764,8 @@ bsp_H_obs=400*log((R_tilde_H(1)-R_D)/(steady_state(R_tilde_H)-steady_state(R_D))
 bsp_F_obs=400*log((R_tilde_F(1)-R_D)/(steady_state(R_tilde_F)-steady_state(R_D)));
 //MEASUREMENT EQUATIONS
 dy_data=Y_net_obs-Y_net_obs(-1)+gamma_y ;
-pb_ratio_data-pb_ratio_data(-1) = n_b_obs - n_b_obs(-1) ;
+//pb_ratio_data-pb_ratio_data(-1) = n_b_obs - n_b_obs(-1) ;
+pb_ratio_data-pb_ratio_data(-1)= (1/ESB-1);
 //dy_data=Y_net_2_obs-Y_net_2_obs(-1)+gamma_y;
 dq_H_data=(q_H_obs-q_H_obs(-1))+gamma_dq_H ;
 dbe_data=4*(b_e_obs-b_e_obs(-1))+gamma_dbe;
@@ -840,23 +852,25 @@ hab,   0.6626,0,1,BETA_PDF,0.5,0.2;
 //sigma_B,0.0658,1e-5,1,     INV_GAMMA_PDF,0.1,2;  //  UNIFORM_PDF,0.5,2.886751345948129; //  GAMMA_PDF,0.04,0.01;// 
 psi_i, 8.4488  ,1,100,NORMAL_PDF,5,2;//standard prior from SW
 psi_h,  10.2520 ,1,100,NORMAL_PDF,5,2;//standard prior from SW
-zeta_m,  0.7541  ,0,1,BETA_PDF,0.5,0.2;//standard prior for stickiness terms-->check whether another paper attempts to estimate this
-zeta_F,0.5042,0,1,BETA_PDF,0.5,0.2;//standard prior for stickiness terms-->check whether another paper attempts to estimate this
+//zeta_m,  0.7541  ,0,1,BETA_PDF,0.5,0.2;//standard prior for stickiness terms-->check whether another paper attempts to estimate this
+//zeta_F,0.5042,0,1,BETA_PDF,0.5,0.2;//standard prior for stickiness terms-->check whether another paper attempts to estimate this
 //stderr epsiHd,0.1,0,99,          UNIFORM_PDF,10, 5.773502691896258;//  GAMMA_PDF,4,4;//
 //stderr epsiHk,0.001,0,99,    UNIFORM_PDF,10, 5.773502691896258;//  GAMMA_PDF,4,4;//
 stderr epsiA,0.1,0,99,     UNIFORM_PDF,10, 5.773502691896258;//  GAMMA_PDF,4,4;//
 stderr epsiJ,0.1,0,99,   UNIFORM_PDF,10, 5.773502691896258;//  GAMMA_PDF,4,4;//
 //stderr epsiK,0.1,0,99,  UNIFORM_PDF,10, 5.773502691896258;//  GAMMA_PDF,4,4;//
-//stderr epsiH,0.1,0,99,    UNIFORM_PDF,10, 5.773502691896258;//  GAMMA_PDF,4,4;//
+stderr epsiH,0.1,0,99,    UNIFORM_PDF,10, 5.773502691896258;//  GAMMA_PDF,4,4;//
 stderr epsiSe,0.1,0,99,  INV_GAMMA_PDF,0.1,2;//    UNIFORM_PDF,10, 5.773502691896258;//  GAMMA_PDF,4,4;//
 //stderr epsiSm,0.1,0,99,  INV_GAMMA_PDF,0.1,2;//    UNIFORM_PDF,10, 5.773502691896258;//  GAMMA_PDF,4,4;//
 stderr epsiSB,0.1,0,99,  INV_GAMMA_PDF,0.1,2;//    UNIFORM_PDF,10, 5.773502691896258;//  GAMMA_PDF,4,4;//
-//stderr epsiWe,0.1,0,99, UNIFORM_PDF,10, 5.773502691896258;//  GAMMA_PDF,4,4;//
-stderr epsiWb,0.1,0,99, UNIFORM_PDF,10, 5.773502691896258;//  GAMMA_PDF,4,4;//
+stderr epsiWe,0.1,0,99, UNIFORM_PDF,10, 5.773502691896258;//  GAMMA_PDF,4,4;//
+//stderr epsiWb,0.1,0,99, UNIFORM_PDF,10, 5.773502691896258;//  GAMMA_PDF,4,4;//
 stderr epsimarkup_m,0.1,0,99, UNIFORM_PDF,10, 5.773502691896258;//  GAMMA_PDF,4,4;//
 stderr epsimarkup_F,0.1,0,99, UNIFORM_PDF,10, 5.773502691896258;//  GAMMA_PDF,4,4;//
 stderr epsiEC,0.1,0,99, UNIFORM_PDF,10, 5.773502691896258;//  GAMMA_PDF,4,4;//
 stderr epsiECAB,0.1,0,99, UNIFORM_PDF,10, 5.773502691896258;//  GAMMA_PDF,4,4;//
+stderr epsiLTVH,0.1,0,99, UNIFORM_PDF,10, 5.773502691896258;//  GAMMA_PDF,4,4;//
+//stderr epsiLTVF,0.1,0,99, UNIFORM_PDF,10, 5.773502691896258;//  GAMMA_PDF,4,4;//
 
 
 
@@ -873,12 +887,12 @@ stderr epsiEbF,0.1,0,99, UNIFORM_PDF,10, 5.773502691896258;//  GAMMA_PDF,4,4;//
 rhoA,0.01,0,1,BETA_PDF,0.5,0.2;
 rhoJ,0.01,0,1,BETA_PDF,0.5,0.2;
 //rhoK,0.01,0,1,BETA_PDF,0.5,0.2;
-//rhoH,0.01,0,1,BETA_PDF,0.5,0.2;
+rhoH,0.01,0,1,BETA_PDF,0.5,0.2;
 rhoSe,0.01,0,1,BETA_PDF,0.5,0.2;
 //rhoSm,0.01,0,1,BETA_PDF,0.5,0.2;                     
 rhoSB,0.01,0,1,BETA_PDF,0.5,0.2;                                                                                                                                       
-//rhoWe,0.01,0,1,BETA_PDF,0.5,0.2;
-rhoWb,0.01,0,1,BETA_PDF,0.5,0.2;
+rhoWe,0.01,0,1,BETA_PDF,0.5,0.2;
+//rhoWb,0.01,0,1,BETA_PDF,0.5,0.2;
 rho_markup_m,0.01,0,1,BETA_PDF,0.5,0.2;
 rho_markup_F,0.01,0,1,BETA_PDF,0.5,0.2;
 rhoEC,0.01,0,1,BETA_PDF,0.5,0.2;
@@ -886,11 +900,13 @@ rhoECAB,0.01,0,1,BETA_PDF,0.5,0.2;
 //rhoEL,0.01,0,1,BETA_PDF,0.5,0.2;
 //rhoEbH,0.01,0,1,BETA_PDF,0.5,0.2;
 rhoEbF,0.01,0,1,BETA_PDF,0.5,0.2;
+rhoLTVH,0.01,0,1,BETA_PDF,0.5,0.2;
+//rhoLTVF,0.01,0,1,BETA_PDF,0.5,0.2;
 end;
 varobs
 dy_data,dw_data,dc_data,dinve_data,
-int_rate_HH_data,int_rate_business_data,bank_rate_data;//,
-//dq_H_data,dbm_data,dbe_data;//,dbm_data,dbe_data;dl_data;,dl_data
+int_rate_HH_data,int_rate_business_data,bank_rate_data,dq_H_data,dbm_data,dbe_data,pb_ratio_data;//,
+//,,;//,dbm_data,dbe_data;dl_data;,dl_data
 //-->dc_data should be taken out potentially    ,dinve_data,dw_data,;,bsp_H_data,,dinve_data,;,dc_data, dbm_data;,, ;int_rate_HH_data , bank_rate_data ,dbe_data bank_rate_data  , int_rate_HH_data;bank_rate_data  ,dbe_data; dbe_data,dbm_data bsp_H_data;; , //////////////dq_H_data, b_to_Y_data, int_rate_HH_data, bank_rate_data,bsp_H_data;,b_to_Y_data ,b_to_Y_data,bsp_H_data
 //bsp_H_data,
 estimation(datafile='estimation_dataset_quarterly.mat', 
@@ -909,9 +925,9 @@ diffuse_kalman_tol=1e-15,
 //use_univariate_filters_if_singularity_is_detected=1,
 //lik_init=1,
 nograph,nodiagnostic,
-first_obs=9,
+first_obs=3,
 nobs=72,
-presample=2,
+presample=8,
 mh_nblocks=1,
 //mcmc_jumping_covariance=prior_variance,
 //load_mh_file,
@@ -929,18 +945,21 @@ mh_drop=0.5);
 shock_groups;
 'Productivity'=epsiA;
 'Housing Preference'=epsiJ;
+'House Price Shock'=epsiH;
 'Business Risk'=epsiSe;
 'Bank Risk'=epsiSB;
 'Entrepreneur Net Worth'=epsiWe;
-'Banker Net Worth'=epsiWb;
+//'Banker Net Worth'=epsiWb;
 'Mortgage Lending Mark-up'=epsimarkup_m;
 'Corporate Lending Mark-up'=epsimarkup_F;
 'Consumption Preference'=epsiEC;
 'Bank Capital'=epsiECAB;
 'Expected Capital Price'=epsiEbF;
+//'Expected House Price'=epsiEbH;
+'Household LTV'=epsiLTVH;
 end;
 
  //stoch_simul(order=1,irf=100,nograph,nocorr,nomoments,nodecomposition,nodisplay,noprint,tex,relative_irf);
 stoch_simul(order=1,irf=40);
-shock_decomposition(datafile='estimation_dataset_quarterly.mat',parameter_set=posterior_mode,init_state=1,use_shock_groups,colormap=jet)
-dy_data,dq_H_data,int_rate_HH_data,int_rate_business_data,bank_rate_data,dbe_data,dbm_data,dinve_data,dw_data,dc_data,dq_H_data;
+shock_decomposition(first_obs=1,datafile='estimation_dataset_quarterly.mat',parameter_set=posterior_mode,use_shock_groups,init_state=0)
+dy_data,dq_H_data,int_rate_HH_data,int_rate_business_data,bank_rate_data,dbe_data,dbm_data,dinve_data,dw_data,dc_data,pb_ratio_data;
