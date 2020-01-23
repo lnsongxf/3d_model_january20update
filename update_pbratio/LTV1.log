@@ -10,52 +10,6 @@ Computing dynamic model derivatives:
 Processing outputs ...
 done
 Preprocessing completed.
-i_var(j),:)),fig_mode1,fig_name],DynareOptions.plot_shock_decomp.nodisplay,DynareOptions.plot_shock_decomp.graph_format);
-        
-In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('plot_shock_decomposition', 'C:\dynare\4.5.7\matlab\plot_shock_decomposition.m', 393)" style="font-weight:bold">plot_shock_decomposition</a> (<a href="matlab: opentoline('C:\dynare\4.5.7\matlab\plot_shock_decomposition.m',393,0)">line 393</a>)
-    graph_decomp(z,shock_names,M_.endo_names,i_var,my_initial_date,M_,options_);
-
-In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('shock_decomposition', 'C:\dynare\4.5.7\matlab\shock_decomposition.m', 126)" style="font-weight:bold">shock_decomposition</a> (<a href="matlab: opentoline('C:\dynare\4.5.7\matlab\shock_decomposition.m',126,0)">line 126</a>)
-    plot_shock_decomposition(M_,oo_,options_,varlist);
-
-In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('LTV1', 'C:\Users\tolga\OneDrive\Desktop\3d_model_updated\update_pbratio\LTV1.m', 1501)" style="font-weight:bold">LTV1</a> (<a href="matlab: opentoline('C:\Users\tolga\OneDrive\Desktop\3d_model_updated\update_pbratio\LTV1.m',1501,0)">line 1501</a>)
-[oo_,M_]= shock_decomposition(M_,oo_,options_,var_list_,bayestopt_,estim_params_);
-
-In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\4.5.7\matlab\dynare.m', 235)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\4.5.7\matlab\dynare.m',235,0)">line 235</a>)
-evalin('base',fname) ;
-
-In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'C:\Users\tolga\OneDrive\Desktop\3d_model_updated\update_pbratio\main.m', 7)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('C:\Users\tolga\OneDrive\Desktop\3d_model_updated\update_pbratio\main.m',7,0)">line 7</a>)
-dynare LTV1.mod;
-} 
-close all
-main
-
-Configuring Dynare ...
-[mex] Generalized QZ.
-[mex] Sylvester equation solution.
-[mex] Kronecker products.
-[mex] Sparse kronecker products.
-[mex] Local state space iteration (second order).
-[mex] Bytecode evaluation.
-[mex] k-order perturbation solver.
-[mex] k-order solution simulation.
-[mex] Quasi Monte-Carlo sequence (Sobol).
-[mex] Markov Switching SBVAR.
-
-Using 64-bit preprocessor
-Starting Dynare (version 4.5.7).
-Starting preprocessing of the model file ...
-Substitution of endo leads >= 2: added 2 auxiliary variables and equations.
-Found 193 equation(s).
-Evaluating expressions...done
-Computing static model derivatives:
- - order 1
-Computing dynamic model derivatives:
- - order 1
-Processing outputs ...
-done
-Preprocessing completed.
-
 
 You did not declare endogenous variables after the estimation/calib_smoother command.
 
@@ -908,13 +862,4 @@ welfare_                  0.9976  0.9952  0.9927  0.9903  0.9878
 welfare_obs               0.9976  0.9952  0.9927  0.9903  0.9878
 dl_data                   0.0398  0.0071 -0.0186 -0.0326 -0.0369
 
-{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('graph_decomp', 'C:\dynare\4.5.7\matlab\graph_decomp.m', 146)" style="font-weight:bold">graph_decomp</a> (<a href="matlab: opentoline('C:\dynare\4.5.7\matlab\graph_decomp.m',146,0)">line 146</a>)
-
-
-In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('plot_shock_decomposition', 'C:\dynare\4.5.7\matlab\plot_shock_decomposition.m', 393)" style="font-weight:bold">plot_shock_decomposition</a> (<a href="matlab: opentoline('C:\dynare\4.5.7\matlab\plot_shock_decomposition.m',393,0)">line 393</a>)
-    graph_decomp(z,shock_names,M_.endo_names,i_var,my_initial_date,M_,options_);
-
-In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('shock_decomposition', 'C:\dynare\4.5.7\matlab\shock_decomposition.m', 126)" style="font-weight:bold">shock_decomposition</a> (<a href="matlab: opentoline('C:\dynare\4.5.7\matlab\shock_decomposition.m',126,0)">line 126</a>)
-    plot_shock_decomposition(M_,oo_,options_,varlist);
-
-In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('LTV1', 'C:\Users\tolga\OneDrive\Desktop\3d_model_updated\update_pbratio\LTV1.
+Total computing time : 0h00m34s
