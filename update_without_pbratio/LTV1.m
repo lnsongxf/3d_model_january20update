@@ -4,6 +4,12 @@
 % Warning : this file is generated automatically by Dynare
 %           from model file (.mod)
 
+if isoctave || matlab_ver_less_than('8.6')
+    clear all
+else
+    clearvars -global
+    clear_persistent_variables(fileparts(which('dynare')), false)
+end
 tic0 = tic;
 % Save empty dates and dseries objects in memory.
 dates('initialize');
@@ -20,6 +26,7 @@ options_.dynare_version = '4.5.7';
 %
 global_initialization;
 diary off;
+diary('LTV1.log');
 M_.exo_names = 'epsiA';
 M_.exo_names_tex = 'epsiA';
 M_.exo_names_long = 'epsiA';
@@ -1486,6 +1493,13 @@ options_.irf = 40;
 options_.order = 1;
 var_list_ = char();
 info = stoch_simul(var_list_);
+options_.first_obs = 11;
+options_.shock_decomp.init_state = 1;
+options_.datafile = 'estimation_dataset_quarterly.mat';
+options_.parameter_set = 'posterior_mode';
+options_.plot_shock_decomp.use_shock_groups = 'default';
+var_list_ = char('dy_data','dq_H_data','int_rate_HH_data','int_rate_business_data','bank_rate_data','dbe_data','dbm_data','dinve_data','dw_data','dc_data','pb_ratio_data');
+[oo_,M_]= shock_decomposition(M_,oo_,options_,var_list_,bayestopt_,estim_params_);
 save('LTV1_results.mat', 'oo_', 'M_', 'options_');
 if exist('estim_params_', 'var') == 1
   save('LTV1_results.mat', 'estim_params_', '-append');
@@ -1511,3 +1525,4 @@ disp(['Total computing time : ' dynsec2hms(toc(tic0)) ]);
 if ~isempty(lastwarn)
   disp('Note: warning(s) encountered in MATLAB/Octave code')
 end
+diary off

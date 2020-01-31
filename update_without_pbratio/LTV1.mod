@@ -961,5 +961,5 @@ end;
 
  //stoch_simul(order=1,irf=100,nograph,nocorr,nomoments,nodecomposition,nodisplay,noprint,tex,relative_irf);
 stoch_simul(order=1,irf=40);
-//shock_decomposition(datafile='estimation_dataset_quarterly.mat',parameter_set=posterior_mode,init_state=1,use_shock_groups)
-//dy_data,dq_H_data,int_rate_HH_data,int_rate_business_data,bank_rate_data,dbe_data,dbm_data,dinve_data,dw_data,dc_data,pb_ratio_data;
+shock_decomposition(first_obs=11,datafile='estimation_dataset_quarterly.mat',parameter_set=posterior_mode,init_state=1,use_shock_groups)
+dy_data,dq_H_data,int_rate_HH_data,int_rate_business_data,bank_rate_data,dbe_data,dbm_data,dinve_data,dw_data,dc_data,pb_ratio_data;
