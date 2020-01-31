@@ -1,8 +1,0 @@
-[cluster]
-Name = c1
-Members = n1
-
-[node]
-Name = n1
-ComputerName = localhost
-CPUnbr = 4
